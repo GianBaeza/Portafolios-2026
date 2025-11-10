@@ -1,0 +1,25 @@
+{
+    "recommendations": [
+        "ms-vscode-remote.remote-wsl",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "formulahendry.auto-rename-tag",
+        "formulahendry.auto-close-tag",
+        "christian-kohler.path-intellisense",
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "PKief.material-icon-theme",
+        "GitHub.github-vscode-theme",
+        "usernamehw.errorlens",
+        "oderwat.indent-rainbow",
+        "ms-azuretools.vscode-docker",
+        "humao.rest-client",
+        "streetsidesoftware.code-spell-checker",
+        "ms-vscode.live-server",
+        "ritwickdey.LiveServer"
+    ],
+    "unwantedRecommendations": []
+}
