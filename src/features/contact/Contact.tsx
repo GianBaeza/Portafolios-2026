@@ -1,8 +1,8 @@
-import React from 'react'
 import { HiArrowUpRight } from 'react-icons/hi2'
 import { styleGlobals } from '../../shared/consts/stylesGlobal'
 import { Element } from 'react-scroll'
 import { useContextoGlobal } from '../../context/ContextGlobal'
+import type { Redes } from '../about/inteface/about'
 const socialNetworks: Redes[] = [
     {
         nombre: 'GitHub',

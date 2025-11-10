@@ -1,12 +1,9 @@
-import React from 'react'
 import type { Project } from '../../consts/projectsData'
 import {
     Card,
-    CardAction,
     CardContent,
     CardDescription,
     CardFooter,
-    CardHeader,
     CardTitle,
 } from '../../../../shared/components/ui/card'
 import { styleGlobals } from '../../../../shared/consts/stylesGlobal'
@@ -14,7 +11,7 @@ import { HiArrowUpRight } from 'react-icons/hi2'
 
 export default function CardProyectos({ proyecto }: { proyecto: Project }) {
     return (
-        <Card className="w-[260px] h-[320px] overflow-hidden p-0 tiktok-sans-uniquifier">
+        <Card className="w-[260px] h-80 overflow-hidden p-0 tiktok-sans-uniquifier">
             <CardContent className="w-full h-[140px] bg-red-500 p-0">
                 <img
                     src={proyecto.backgroundImage}

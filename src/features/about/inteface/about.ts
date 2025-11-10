@@ -1,7 +1,7 @@
 import type { JSX } from 'react'
 
 export interface Redes {
-    nombre: 'GitHub' | 'LinkedIn' | 'Twitter' | 'Instagram' | 'Portfolio'
+    nombre: 'GitHub' | 'LinkedIn' | 'Twitter' | 'Instagram' | 'Email'
     url: string
     subNombre: string
     icon: JSX.Element

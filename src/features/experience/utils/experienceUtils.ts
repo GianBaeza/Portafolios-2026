@@ -1,5 +1,3 @@
-import type { Experience } from '../interface/experience'
-
 /**
  * Formatea el rango de fechas de experiencia laboral
  */
@@ -25,21 +23,21 @@ export const calculateExperienceDuration = (
 /**
  * Filtra experiencias por tecnología
  */
-export const filterExperiencesByTechnology = (
-    experiences: Experience[],
-    technology: string,
-): Experience[] => {
-    return experiences.filter((exp) =>
-        exp.technologies?.some((tech) =>
-            tech.toLowerCase().includes(technology.toLowerCase()),
-        ),
-    )
-}
+// export const filterExperiencesByTechnology = (
+//     experiences: Experience[],
+//     technology: string,
+// ): Experience[] => {
+//     return experiences.filter((exp) =>
+//         exp.technologies?.some((tech) =>
+//             tech.toLowerCase().includes(technology.toLowerCase()),
+//         ),
+//     )
+// }
 
 /**
  * Obtiene todas las tecnologías únicas de las experiencias
  */
-export const getAllTechnologies = (experiences: Experience[]): string[] => {
-    const allTechs = experiences.flatMap((exp) => exp.technologies || [])
-    return [...new Set(allTechs)].sort()
-}
+// export const getAllTechnologies = (experiences: Experience[]): string[] => {
+//     const allTechs = experiences.flatMap((exp) => exp.technologies || [])
+//     return [...new Set(allTechs)].sort()
+// }

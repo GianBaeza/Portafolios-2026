@@ -4,20 +4,16 @@ import {
     motion,
     MotionValue,
     useMotionValue,
-    type SpringOptions,
     AnimatePresence,
 } from 'motion/react'
 import {
     Children,
     cloneElement,
     createContext,
-    useContext,
     useEffect,
     useState,
 } from 'react'
 import { cn } from '@/lib/utils'
-
-const DEFAULT_PANEL_WIDTH = '100%'
 
 export type VerticalDockProps = {
     children: React.ReactNode
@@ -41,7 +37,7 @@ export type VerticalDockIconProps = {
     children: React.ReactNode
 }
 
-export type VerticalDockContextType = {}
+export type VerticalDockContextType = object
 
 const VerticalDockContext = createContext<VerticalDockContextType | undefined>(
     undefined,
@@ -61,14 +57,14 @@ function VerticalDockProvider({
     )
 }
 
-function useVerticalDock() {
-    const context = useContext(VerticalDockContext)
-    if (!context)
-        throw new Error(
-            'useVerticalDock must be used within a VerticalDockProvider',
-        )
-    return context
-}
+// function useVerticalDock() {
+//     const context = useContext(VerticalDockContext)
+//     if (!context)
+//         throw new Error(
+//             'useVerticalDock must be used within a VerticalDockProvider',
+//         )
+//     return context
+// }
 
 function VerticalDock({ children, className }: VerticalDockProps) {
     return (
@@ -152,7 +148,7 @@ function VerticalDockLabel({
                     exit={{ opacity: 0, x: 0 }}
                     transition={{ duration: 0.2, ease: 'easeOut' }}
                     className={cn(
-                        'fixed left-[40px] top-1/2 -translate-y-1/2 w-max whitespace-nowrap rounded-md border border-gray-200 bg-gray-100 px-2 py-1 text-xs text-neutral-700 shadow-md dark:border-neutral-800 dark:bg-neutral-800 dark:text-white z-[9999]',
+                        'fixed left-10 top-1/2 -translate-y-1/2 w-max whitespace-nowrap rounded-md border border-gray-200 bg-gray-100 px-2 py-1 text-xs text-neutral-700 shadow-md dark:border-neutral-800 dark:bg-neutral-800 dark:text-white z-9999',
                         className,
                     )}
                     role="tooltip"

@@ -5,8 +5,7 @@ import {
     VerticalDockLabel,
     VerticalDockIcon,
 } from '../motion-primitives/vertical-dock'
-import { Link, Element } from 'react-scroll'
-import { useContext, useState } from 'react'
+import { Link } from 'react-scroll'
 import { useContextoGlobal, type rutas } from '../../../context/ContextGlobal'
 const navigationData = [
     {
