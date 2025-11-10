@@ -49,7 +49,7 @@ export const projectsData: Project[] = [
         id: 3,
         title: 'Next.js Optimizer MCP Server',
         description:
-            'API RESTful para pronósticos meteorológicos con integración de múltiples fuentes de datos y sistema de caché inteligente.',
+            'Servidor MCP que analiza repositorios de GitHub y proporciona recomendaciones de optimización para proyectos Next.js y React, enfocándose en evitar re-renderizados innecesarios y seguir mejores prácticas.',
         technologies: ['TypeScript', 'Docker', 'PostgreSQL'],
         repositorio:
             'https://github.com/GianBaeza/Next.js-Optimizer-MCP-Server',
