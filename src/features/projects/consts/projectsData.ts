@@ -28,7 +28,7 @@ export const projectsData: Project[] = [
             'Nos dedicamos al equipamiento y maquinaria agroindustrial, minería y petróleo.',
         technologies: ['React', 'Node.js', 'MongoDB'],
         repositorio: 'https://github.com/GianBaeza/Tecnagent-Web',
-        backgroundImage: '../../../../public/tecnagent.png', // Ejemplo - cambiar por tu imagen
+        backgroundImage: '/public/tecnagent.png', // Ejemplo - cambiar por tu imagen
         backgroundColor: colorPalette.primary,
         textColor: colorPalette.text,
         tagColor: colorPalette.tagBackground,
@@ -40,7 +40,7 @@ export const projectsData: Project[] = [
             'Plataforma de comercio electrónico para una cervecería artesanal, con catálogo de productos.',
         technologies: ['Vue.js', 'Firebase', 'TypeScript'],
         repositorio: 'https://github.com/GianBaeza/CestifniCerveza',
-        backgroundImage: '../../../../public/cerveceria.png', // Ejemplo - cambiar por tu imagen
+        backgroundImage: '/public/cerveceria.png', // Ejemplo - cambiar por tu imagen
         backgroundColor: colorPalette.secondary,
         textColor: colorPalette.text,
         tagColor: colorPalette.tagBackground,
@@ -53,7 +53,7 @@ export const projectsData: Project[] = [
         technologies: ['TypeScript', 'Docker', 'PostgreSQL'],
         repositorio:
             'https://github.com/GianBaeza/Next.js-Optimizer-MCP-Server',
-        backgroundImage: '../../../../public/mcp.png', // Ejemplo - cambiar por tu imagen
+        backgroundImage: '/public/mcp.png', // Ejemplo - cambiar por tu imagen
         backgroundColor: colorPalette.accent,
         textColor: colorPalette.text,
         tagColor: colorPalette.tagBackground,
