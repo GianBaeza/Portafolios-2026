@@ -22,7 +22,7 @@ export default function Proyectos() {
                 <p className={`${styleGlobals.p}`}></p>
             </span>
 
-            <section className=" grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5 space-x-10 space-y-5">
+            <section className=" grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-5 gap-2 space-y-5 w-full">
                 {projectsData.map((proyecto) => {
                     return (
                         <CardProyectos key={proyecto.id} proyecto={proyecto} />

@@ -39,7 +39,7 @@ export default function About({ className = '' }: AboutProps) {
             name="/sobre-mi"
             className={`w-11/12  flex flex-col items-center justify-center ${className} h-full`}
         >
-            <div className="w-full  bg-transparent flex gap-10 rounded-lg pt-10 ">
+            <div className="w-full  bg-transparent flex gap-2 md:gap-10  rounded-lg pt-10 ">
                 <Imagen />
                 <div className="tiktok-sans-uniquifier flex flex-col justify-center">
                     <h2 className={styleGlobals.h3}>{personalInfo.name}</h2>

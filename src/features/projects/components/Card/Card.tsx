@@ -11,7 +11,7 @@ import { HiArrowUpRight } from 'react-icons/hi2'
 
 export default function CardProyectos({ proyecto }: { proyecto: Project }) {
     return (
-        <Card className="w-[260px] h-80 overflow-hidden p-0 tiktok-sans-uniquifier">
+        <Card className="w-[260px] h-96 overflow-hidden p-0 tiktok-sans-uniquifier">
             <CardContent className="w-full h-[140px] bg-white p-0">
                 <img
                     src={proyecto.backgroundImage}
