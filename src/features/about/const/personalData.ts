@@ -3,7 +3,7 @@ import type { PersonalInfo } from '../inteface/about'
 export const PERSONAL_INFO: PersonalInfo = {
     name: 'Gian Franco Baeza',
     location: 'Buenos Aires, La Plata',
-    role: 'Frontend Developer',
+    role: 'Frontend Developer · AI-Augmented Development',
 }
 
 export const SOCIAL_LINKS = {

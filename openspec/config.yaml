@@ -1,0 +1,36 @@
+# openspec/config.yaml
+schema: spec-driven
+
+context: |
+  Stack: React 19.1 + Vite 7.1 + TypeScript 5.9 (SWC) + Tailwind CSS 4.1
+  PM: pnpm
+  Alias: @/ -> ./src/
+  Architecture: Feature-based (src/features/), shared components (ui, motion-primitives, Navbar),
+               global context (ContextGlobal), shadcn/ui (new-york style)
+  Animations: framer-motion/motion 12, OGL (WebGL), Three.js
+  Linting: ESLint 9 flat config (tseslint, react-hooks, react-refresh)
+  TypeScript: strict mode, verbatimModuleSyntax, bundler resolution
+  Testing: NONE — no test runner installed, no CI, no test files
+  Strict TDD: false (no test runner available)
+  Formatter: none explicit (prettier extension in .vscode only)
+
+rules:
+  proposal:
+    - Include rollback plan for risky changes
+  specs:
+    - Use Given/When/Then for scenarios
+    - Use RFC 2119 keywords (MUST, SHALL, SHOULD, MAY)
+  design:
+    - Document architecture decisions with rationale
+  tasks:
+    - Group by phase, use hierarchical numbering
+    - Keep tasks completable in one session
+  apply:
+    tdd: false
+    test_command: ""
+  verify:
+    test_command: ""
+    build_command: "pnpm build"
+    coverage_threshold: 0
+  archive:
+    - Warn before merging destructive deltas

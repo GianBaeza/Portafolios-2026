@@ -144,6 +144,10 @@ p {
     -webkit-box-shadow: 3px -2px 5px 5px rgba(0, 0, 0, 0.67) inset;
     -moz-box-shadow: 3px -2px 5px 5px rgba(0, 0, 0, 0.67) inset;
 }
+@utility text-shadow-lg {
+    text-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
+}
+
 @layer base {
     * {
         @apply border-border outline-ring/50;
@@ -151,4 +155,23 @@ p {
     body {
         @apply bg-background text-foreground;
     }
+
+    /* Focus visible global para navegación por teclado */
+    *:focus-visible {
+        @apply outline-2 outline-offset-2 outline-orange-400;
+        outline-style: solid;
+    }
+
+    /* Reset para clicks de mouse — no muestra outline en click */
+    *:focus:not(:focus-visible) {
+        outline: none;
+    }
 }
+
+/* Transición global suave en elementos interactivos */
+a,
+button,
+[role='button'] {
+    @apply transition-all duration-200 ease-in-out;
+}
+

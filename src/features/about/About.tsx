@@ -1,8 +1,9 @@
 import { styleGlobals } from '../../shared/consts/stylesGlobal'
 import Imagen from './components/Imagen'
 import { text_about } from './const/text'
+import { PERSONAL_INFO } from './const/personalData'
 import { HiArrowUpRight } from 'react-icons/hi2'
-import type { Redes, AboutProps, AboutData } from './inteface/about'
+import type { Redes, AboutProps } from './inteface/about'
 import { Element } from 'react-scroll'
 import { useContextoGlobal } from '../../context/ContextGlobal'
 const socialNetworks: Redes[] = [
@@ -21,55 +22,52 @@ const socialNetworks: Redes[] = [
 ]
 
 export default function About({ className = '' }: AboutProps) {
-    const aboutData: AboutData = {
-        personalInfo: {
-            name: 'Gian Franco Baeza',
-            location: 'Buenos Aires, La Plata',
-            role: 'Frontend Developer',
-        },
-        textContent: text_about,
-        socialNetworks,
-    }
     const { rutaActual } = useContextoGlobal()
-
-    const { personalInfo, textContent, socialNetworks: redes } = aboutData
 
     return (
         <Element
             name="/sobre-mi"
             className={`w-11/12  flex flex-col items-center justify-center ${className} h-full`}
+            aria-label="Sobre mí"
         >
-            <div className="w-full  bg-transparent flex gap-2 md:gap-10  rounded-lg pt-10 ">
+            <div className="w-full  bg-transparent flex gap-4 md:gap-10  rounded-lg pt-10 ">
                 <Imagen />
                 <div className="tiktok-sans-uniquifier flex flex-col justify-center">
-                    <h2 className={styleGlobals.h3}>{personalInfo.name}</h2>
-                    <h3 className={styleGlobals.h3}>{personalInfo.location}</h3>
-                    <h1 className={styleGlobals.h1}>{personalInfo.role}</h1>
+                    <h2 className={styleGlobals.h3}>{PERSONAL_INFO.name}</h2>
+                    <h3 className={styleGlobals.h3}>{PERSONAL_INFO.location}</h3>
+                    <h1 className={styleGlobals.h1}>{PERSONAL_INFO.role}</h1>
                 </div>
             </div>
 
-            <main className="bg-transparent w-full h-full tiktok-sans-uniquifier pt-20 flex flex-col items-center justify-start gap-5">
+            <section
+                aria-labelledby="about-title"
+                className="bg-transparent w-full h-full tiktok-sans-uniquifier pt-20 flex flex-col items-center justify-start gap-5"
+            >
                 <h1
+                    id="about-title"
                     className={`${styleGlobals.h1} ${
                         rutaActual === '/sobre-mi' ? 'text-shadow-lg ' : ''
                     }`}
                 >
-                    {textContent.title}
+                    {text_about.title}
                 </h1>
-                <p className={styleGlobals.p}>{textContent.description}</p>
+                <p className={`${styleGlobals.p} whitespace-pre-line`}>
+                    {text_about.description}
+                </p>
 
-                <ul className="w-full pt-3 space-y-2">
-                    {redes.map((red: Redes, index: number) => (
+                <ul className="w-full pt-3 space-y-2" aria-label="Redes sociales">
+                    {socialNetworks.map((red: Redes, index: number) => (
                         <li
                             key={`${red.nombre}-${index}`}
-                            className="text-base flex items-center gap-40"
+                            className="text-base flex items-center justify-between gap-4"
                         >
                             <span className={styleGlobals.p}>{red.nombre}</span>
                             <a
                                 href={red.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className={`${styleGlobals.p} text-gray-500 flex items-start gap-1 underline hover:text-orange-500 text-sm`}
+                                aria-label={`${red.nombre} — abrir en nueva ventana`}
+                                className={`${styleGlobals.p} text-gray-500 dark:text-gray-400 flex items-center gap-1 underline hover:text-orange-500 text-sm focus-visible:outline-2 focus-visible:outline-orange-400 focus-visible:outline-offset-2 rounded-sm transition-colors`}
                             >
                                 {red.subNombre}
                                 {red.icon}
@@ -77,7 +75,7 @@ export default function About({ className = '' }: AboutProps) {
                         </li>
                     ))}
                 </ul>
-            </main>
+            </section>
         </Element>
     )
 }

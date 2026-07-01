@@ -11,11 +11,11 @@ import { HiArrowUpRight } from 'react-icons/hi2'
 
 export default function CardProyectos({ proyecto }: { proyecto: Project }) {
     return (
-        <Card className="w-[260px] h-96 overflow-hidden p-0 tiktok-sans-uniquifier">
-            <CardContent className="w-full h-[140px] bg-white p-0">
+        <Card className="w-[260px] h-96 overflow-hidden p-0 tiktok-sans-uniquifier hover:shadow-md transition-shadow duration-200 dark:border-gray-800 dark:bg-gray-900/50">
+            <CardContent className="w-full h-[140px] bg-white dark:bg-gray-800 p-0">
                 <img
                     src={proyecto.backgroundImage}
-                    alt={proyecto.title}
+                    alt={`Captura de pantalla del proyecto ${proyecto.title}`}
                     className="w-full h-[150px] object-cover object-center rounded-t-md mb-2"
                 />
             </CardContent>
@@ -24,19 +24,12 @@ export default function CardProyectos({ proyecto }: { proyecto: Project }) {
                     {proyecto.title}
                 </CardTitle>
                 <CardContent className="flex flex-col  w-full bg-transparent  items-start gap-1 justify-start p-0">
-                    {/* <ul className="flex items-start gap-2">
-                        {proyecto.technologies.map((tech, i) => (
-                            <li
-                                key={i}
-                                className="inline-block  text-orange-500 hover:underline text-xs "
-                            >
-                                {tech}
-                            </li>
-                        ))}
-                    </ul> */}
                     <a
                         href={proyecto.repositorio}
-                        className={`${styleGlobals.p} flex items-center gap-1 cursor-pointer underline hover:text-orange-500 text-sm`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Repositorio de ${proyecto.title} — abrir en nueva ventana`}
+                        className={`${styleGlobals.p} flex items-center gap-1 underline hover:text-orange-500 text-sm focus-visible:outline-2 focus-visible:outline-orange-400 focus-visible:outline-offset-2 rounded-sm transition-colors`}
                     >
                         Github
                         <HiArrowUpRight size={11} />
